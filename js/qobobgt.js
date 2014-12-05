@@ -30,7 +30,7 @@ function createFlexSlider() {
 
 	var i;
 	for (i = 0; i < arguments.length; i++) {
-		carousel = $(arguments[i]).split(",");
+		carousel = arguments[i].split(",");
 
 		if (carousel.length == 2) {
 			$(carousel[0]).flexslider({
