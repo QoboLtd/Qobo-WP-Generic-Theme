@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Homepage
- * The template for displaying the homepage
+ * Template Name: Items List
+ * The template for displaying the items list
  *
  * @package Qobo Generic Wordpress Theme
  *
@@ -15,11 +15,10 @@ get_header();
 	while (have_posts()) :
 		the_post();
 		// Include the page content template.
-		get_template_part('content', 'home');
+		get_template_part('content', 'items-list');
 	endwhile;
-?>
-</div>
-<!-- #main-content -->
+	?>
+</div><!-- #main-content -->
 
 <?php
 get_footer();

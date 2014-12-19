@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Homepage
- * The template for displaying the homepage
+ * Template Name: Contact Us
+ * The template for displaying the Contact Us page
  *
  * @package Qobo Generic Wordpress Theme
  *
@@ -15,11 +15,9 @@ get_header();
 	while (have_posts()) :
 		the_post();
 		// Include the page content template.
-		get_template_part('content', 'home');
+		get_template_part('content', 'contact');
 	endwhile;
-?>
-</div>
-<!-- #main-content -->
-
+	?>
+</div><!-- #main-content -->
 <?php
 get_footer();

@@ -10,38 +10,18 @@ Tags: responsive, white, bootstrap, lightbox, flexslider, jquery, slim scroll, f
 License: GPL2
 
 */
-
 get_header(); ?>
 
 <div id="main-content" class="main-content">
-	
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" >
-		<?php
-			if ( have_posts() ) :
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
-
-					/*
-					 * Include the post format-specific template for the content. If you want to
-					 * use this in a child theme, then include a file called called content-___.php
-					 * (where ___ is the post format) and that will be used instead.
-					 */
-					get_template_part( 'content' );
-
-				endwhile;
-
-			else :
-				// If no content, include the "No posts found" template.
-				get_template_part( 'content', 'none' );
-
-			endif;
-		?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		<?php if ( have_posts() ) :
+			// Start the Loop.
+			while ( have_posts() ) : the_post();
+				get_template_part( 'content' );
+			endwhile;
+		else :
+			get_template_part( 'content', 'none' );
+		endif; ?>
 </div><!-- #main-content -->
 
 <?php
-get_sidebar();
 get_footer();
