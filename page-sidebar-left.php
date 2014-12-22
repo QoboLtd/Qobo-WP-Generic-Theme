@@ -1,14 +1,12 @@
 <?php
 /**
- * Template Name: Both sidebars
- * 
- * The template for displaying the content with 
- * two sidebars in each side
- * 
+ * Template Name: Left Sidebar 1
+ * The template for displaying a sidebar right of the content.
+ *
  * @package Qobo Generic Wordpress Theme
  *
  */
-get_header ();
+get_header();
 ?>
 
 <div id="main-content" class="content-area">
@@ -17,10 +15,10 @@ get_header ();
 	while (have_posts()) :
 		the_post();
 		// Include the page content template.
-		get_template_part('content' , 'both-sidebars');
+		get_template_part('content','sidebar-left');
 	endwhile;
 	?>
 </div> <!-- #main-content -->
 
 <?php
-get_footer ();
+get_footer();
