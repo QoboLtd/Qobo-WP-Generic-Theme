@@ -5,6 +5,14 @@
  * @package Qobo Generic Wordpress Theme
  */
 
+ 
+/* Flush your rewrite rules for custom post types*/
+function bt_flush_rewrite_rules() {
+    flush_rewrite_rules();
+}
+/*  Flush rewrite rules when switching themes*/
+add_action('after_switch_theme', 'bt_flush_rewrite_rules');
+ 
 /*-----------------------------------------------------------------------------------*/
 /*	Register Menu
  /*-----------------------------------------------------------------------------------*/
