@@ -68,8 +68,7 @@ function stretch() {
 	if (document.documentElement.offsetHeight < $(window).height()) {
 		var fullHeight = $(window).height() - $("footer").outerHeight()
 				- $("header").outerHeight();
-
-		$("#main").height(fullHeight);
+		$("#main").css('min-height',fullHeight);
 	}
 }
 
@@ -82,3 +81,7 @@ function makeSlimScroll() {
 		});
 	}
 }
+
+$(window).onresize = function(){
+	stretch();
+};
