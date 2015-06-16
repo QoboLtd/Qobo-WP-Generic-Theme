@@ -83,7 +83,7 @@
 		<div class="header-logo wrap clearfix">
 			<h1 class="logo">
 				<a href="<?php bloginfo("url")?>" title="Company logo">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="Company logo">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Company logo">
 				</a>
 			</h1>
 			<!--//logo-->
