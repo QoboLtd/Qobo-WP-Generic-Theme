@@ -2,9 +2,9 @@
 /**
  * The template used for displaying 404 page
  *
- * @package Qobo WP Theme
- *
+ * @package Qobo_Generic_Wordpress_Theme
  */
+
 get_header(); ?>
 <div class="container">
 	<div class="row">

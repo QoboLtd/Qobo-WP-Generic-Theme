@@ -2,13 +2,13 @@
 /**
  * The template used for displaying page content
  *
- * @package Qobo WP Theme
- *
+ * @package Qobo_Generic_Wordpress_Theme
  */
+
 ?>
 
 <div class="site-content content-area" role="main">
-	<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
 		<div class="site-homepage">
 			<?php
 			the_content();

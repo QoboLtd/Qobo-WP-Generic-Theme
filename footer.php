@@ -4,8 +4,9 @@
  *
  * Contains footer content and the closing of the #main and #page div elements.
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
+
 ?>
 
 </div><!-- #main -->
@@ -33,7 +34,7 @@
 				<?php dynamic_sidebar( 'footer-widget-6' ); ?>
 				<?php endif; ?>
 
-				<?php the_widget('QBDEVBY_Widget'); ?>
+				<?php the_widget( 'QBDEVBY_Widget' ); ?>
 		</div>
 	</div>
 </footer><!-- footer -->

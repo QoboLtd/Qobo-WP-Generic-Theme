@@ -2,8 +2,9 @@
 /**
  * The Left 1 Sidebar containing the property finder
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
+
 ?>
 <div class="sidebar col-sm-3">
 	<?php if ( is_active_sidebar( 'sidebar-left' ) ) : ?>

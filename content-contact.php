@@ -2,30 +2,29 @@
 /**
  * Content template used for displaying the contact us content
  *
- * @package Qobo Generic Wordpress Theme
- *
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 $url = get_permalink();
 $image = null;
-$image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full');
+$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
 ?>
 
 <div class="site-content content-area" role="main"
 <?php
-if ($image != null) {
+if ( ! empty( $image ) && is_array( $image ) ) {
 	echo 'style="background: url(' . $image[0] . ') no-repeat; background-size:cover"';
 }
 ?> >
-	<article id="post-<?php the_ID(); ?>" <?php post_class('wrap row'); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'wrap row' ); ?>>
 		<div class="site-contact-us">
 			<div class="col-sm-12">
-			<?php the_title("<h1 class=\"page-title\">", "</h1>"); ?>
+			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 			</div>
 			<div class="col-sm-12 contact-form-container">
 				<div class="contact-content row padding-zero-leftright">
 					<div class="contact-form  col-md-8">
-						<form action="<?php echo get_stylesheet_directory_uri()   . "/inc/contact-us.php"?>" method="post" >
+						<form action="<?php echo get_stylesheet_directory_uri() . '/inc/contact-us.php'?>" method="post" >
 							<div class="col-sm-6 first-name">
 								<div class="col-sm-12 first-name-label">
 									First Name
@@ -66,7 +65,7 @@ if ($image != null) {
 							</div>
 							<input type="hidden" name="redirect" value="<?php echo $url; ?>" />
 							<input type="hidden" name="site-url" value="<?php echo WP_HOME ; ?>" />
-							<?php if (get_the_content()) { ?>
+							<?php if ( get_the_content() ) { ?>
 							<input type="hidden" name="email-to" value="<?php echo get_the_content(); ?>" />
 							<?php } ?>
 							
