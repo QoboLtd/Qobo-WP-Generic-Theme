@@ -1,5 +1,25 @@
 <?php
+/**
+ * Send email
+ *
+ * Send email from the contact us form and provide user with
+ * the feedback/redirect.
+ *
+ * @package Qobo_Generic_Wordpress_Theme
+ */
 
+/**
+ * Send email
+ *
+ * @todo Cleanup variables and check for being in POST request.
+ * @param string $name Name.
+ * @param string $lastname Last name.
+ * @param string $from From.
+ * @param string $message Message.
+ * @param string $url URL.
+ * @param string $redirect Redirect.
+ * @param string $to To.
+ */
 function sendEmail( $name, $lastname, $from, $message, $url, $redirect, $to ) {
 	?>
 	<html>

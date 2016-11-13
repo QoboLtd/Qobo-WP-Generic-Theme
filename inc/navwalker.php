@@ -1,4 +1,9 @@
 <?php
+/**
+ * WP Bootstrap Nav Walker
+ *
+ * @package WP_Bootstrap_Navwalker
+ */
 
 /**
  * Class Name: wp_bootstrap_navwalker
@@ -12,42 +17,46 @@
  *
  * Added support for multilevel menus. Multilevel-menu CSS file is needed
  */
-
 class qobogt_wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
-		/**
-		 * @see Walker::start_lvl()
-		 * @since 3.0.0
-		 *
-		 * @param string $output Passed by reference. Used to append additional content.
-		 * @param int    $depth Depth of page. Used for padding.
-		 */
+	/**
+	 * Walker start level
+	 *
+	 * @see Walker::start_lvl()
+	 * @since 3.0.0
+	 *
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param int    $depth Depth of page. Used for padding.
+	 * @param array  $args  Arguments list for compatibility.
+	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat( "\t", $depth );
 		$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\">\n";
 	}
 
-		/**
-		 * @see Walker::start_el()
-		 * @since 3.0.0
-		 *
-		 * @param string $output Passed by reference. Used to append additional content.
-		 * @param object $item Menu item data object.
-		 * @param int    $depth Depth of menu item. Used for padding.
-		 * @param int    $current_page Menu item ID.
-		 * @param object $args
-		 */
+	/**
+	 * Walker start element
+	 *
+	 * @see Walker::start_el()
+	 * @since 3.0.0
+	 *
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param object $item Menu item data object.
+	 * @param int    $depth Depth of menu item. Used for padding.
+	 * @param array  $args Arguments list for compatibility.
+	 * @param int    $id ID for compatibility.
+	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 		/**
-				 * Dividers, Headers or Disabled
-				 * =============================
-				 * Determine whether the item is a Divider, Header, Disabled or regular
-				 * menu item. To prevent errors we use the strcasecmp() function to so a
-				 * comparison that is not case sensitive. The strcasecmp() function returns
-				 * a 0 if the strings are equal.
-				 */
+		 * Dividers, Headers or Disabled
+		 * =============================
+		 * Determine whether the item is a Divider, Header, Disabled or regular
+		 * menu item. To prevent errors we use the strcasecmp() function to so a
+		 * comparison that is not case sensitive. The strcasecmp() function returns
+		 * a 0 if the strings are equal.
+		 */
 
 		if ( strcasecmp( $item->attr_title, 'divider' ) == 0 && $depth === 1 ) {
 			$output .= $indent . '<li role="presentation" class="divider">';
@@ -134,26 +143,26 @@ class qobogt_wp_bootstrap_navwalker extends Walker_Nav_Menu {
 		}
 	}
 
-		/**
-		 * Traverse elements to create list from elements.
-		 *
-		 * Display one element if the element doesn't have any children otherwise,
-		 * display the element and its children. Will only traverse up to the max
-		 * depth and no ignore elements under that depth.
-		 *
-		 * This method shouldn't be called directly, use the walk() method instead.
-		 *
-		 * @see Walker::start_el()
-		 * @since 2.5.0
-		 *
-		 * @param object $element Data object
-		 * @param array  $children_elements List of elements to continue traversing.
-		 * @param int    $max_depth Max depth to traverse.
-		 * @param int    $depth Depth of current element.
-		 * @param array  $args
-		 * @param string $output Passed by reference. Used to append additional content.
-		 * @return null Null on failure with no changes to parameters.
-		 */
+	/**
+	 * Traverse elements to create list from elements.
+	 *
+	 * Display one element if the element doesn't have any children otherwise,
+	 * display the element and its children. Will only traverse up to the max
+	 * depth and no ignore elements under that depth.
+	 *
+	 * This method shouldn't be called directly, use the walk() method instead.
+	 *
+	 * @see Walker::start_el()
+	 * @since 2.5.0
+	 *
+	 * @param object $element Data object
+	 * @param array  $children_elements List of elements to continue traversing.
+	 * @param int    $max_depth Max depth to traverse.
+	 * @param int    $depth Depth of current element.
+	 * @param array  $args
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @return null Null on failure with no changes to parameters.
+	 */
 	public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
 		if ( ! $element ) {
 			return;
@@ -169,16 +178,16 @@ class qobogt_wp_bootstrap_navwalker extends Walker_Nav_Menu {
 		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
 	}
 
-		/**
-		 * Menu Fallback
-		 * =============
-		 * If this function is assigned to the wp_nav_menu's fallback_cb variable
-		 * and a manu has not been assigned to the theme location in the WordPress
-		 * menu manager the function with display nothing to a non-logged in user,
-		 * and will add a link to the WordPress menu manager if logged in as an admin.
-		 *
-		 * @param array $args passed from the wp_nav_menu function.
-		 */
+	/**
+	 * Menu Fallback
+	 *
+	 * If this function is assigned to the wp_nav_menu's fallback_cb variable
+	 * and a manu has not been assigned to the theme location in the WordPress
+	 * menu manager the function with display nothing to a non-logged in user,
+	 * and will add a link to the WordPress menu manager if logged in as an admin.
+	 *
+	 * @param array $args passed from the wp_nav_menu function.
+	 */
 	public static function fallback( $args ) {
 		if ( current_user_can( 'manage_options' ) ) {
 

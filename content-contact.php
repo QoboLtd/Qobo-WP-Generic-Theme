@@ -12,7 +12,7 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'fu
 
 <div class="site-content content-area" role="main"
 <?php
-if ( $image != null ) {
+if ( ! empty( $image ) && is_array( $image ) ) {
 	echo 'style="background: url(' . $image[0] . ') no-repeat; background-size:cover"';
 }
 ?> >

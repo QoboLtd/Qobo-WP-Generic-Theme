@@ -5,6 +5,12 @@
  * @package Qobo_Generic_Wordpress_Theme
  */
 
+/**
+ * Create gallery section
+ *
+ * @param string $section_title Section title.
+ * @param array  $args Arguments to be passed  to WP_Query.
+ */
 function createGallerySection( $section_title, $args ) {
 	$the_query = new WP_Query( $args );
 	if ( $the_query->have_posts() ) { ?>
