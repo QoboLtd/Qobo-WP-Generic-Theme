@@ -2,7 +2,7 @@
 /**
  * Content template used for displaying the gallery content
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 function createGallerySection( $section_title, $args ) {

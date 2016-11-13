@@ -3,7 +3,7 @@
  * Template Name: Items List
  * The template for displaying the items list
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 get_header();

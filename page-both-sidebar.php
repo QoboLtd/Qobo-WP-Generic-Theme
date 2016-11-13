@@ -5,7 +5,7 @@
  * The template for displaying the content with
  * two sidebars in each side
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 get_header();

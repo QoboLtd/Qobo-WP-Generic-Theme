@@ -3,7 +3,7 @@
  * Template Name: No sidebars
  * The template for displaying the content without any sidebars
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 get_header();

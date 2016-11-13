@@ -3,7 +3,7 @@
  * Template Name: Right Sidebar
  * The template for displaying a sidebar right of the content.
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 get_header();

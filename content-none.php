@@ -2,7 +2,7 @@
 /**
  * The template for displaying a "No posts found" message
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 ?>

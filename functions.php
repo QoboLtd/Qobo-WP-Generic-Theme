@@ -2,45 +2,35 @@
 /**
  * Qobo Generic Wordpress Theme functions and definitions
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
-/* Flush your rewrite rules for custom post types*/
+/**
+ * Flush rewrite rules for custom post types
+ */
 function bt_flush_rewrite_rules() {
 	flush_rewrite_rules();
 }
 /*  Flush rewrite rules when switching themes*/
 add_action( 'after_switch_theme', 'bt_flush_rewrite_rules' );
 
-/*
------------------------------------------------------------------------------------*/
-/*
-  Register Menu
- /*-----------------------------------------------------------------------------------*/
+// Register Menus.
 register_nav_menus( array(
 	'primary' => __( 'Primary Menu', 'Qobo BGT' ),
 	'footer' => __( 'Footer Menu', 'Qobo BGT' ),
 ) );
 
-/*
------------------------------------------------------------------------------------*/
-/*
-  Add thumbnails support to posts
- /*-----------------------------------------------------------------------------------*/
+// Add thumbnails support to posts.
 add_theme_support( 'post-thumbnails' );
 
-/*
------------------------------------------------------------------------------------*/
-/*
-  Load custom nav walker
- /*-----------------------------------------------------------------------------------*/
+// Load custom nav walker.
 require get_template_directory() . '/inc/navwalker.php';
 
-/*
------------------------------------------------------------------------------------*/
-/*
-  Widgets
- /*-----------------------------------------------------------------------------------*/
+/**
+ * Register widget sidebars
+ *
+ * @return void
+ */
 function qobobgt_widgets_init() {
 	register_sidebar( array(
 			'id' => 'sidebar-right',
@@ -111,6 +101,12 @@ function qobobgt_widgets_init() {
 }
 add_action( 'widgets_init', 'qobobgt_widgets_init' );
 
+/**
+ * Include custom CSS from a given file
+ *
+ * @param string $cssFile Path to CSS file
+ * @return string HTML <link> tag with URL of the custom CSS
+ */
 function includeCustomCSS( $cssFile = '/custom.css' ) {
 	$result = '';
 
@@ -124,6 +120,12 @@ function includeCustomCSS( $cssFile = '/custom.css' ) {
 	return $result;
 }
 
+/**
+ * Include custom JavaScript from a given file
+ *
+ * @param string $jsFile Path to JS file
+ * @return string HTML <script> tag with URL of the custom JS
+ */
 function includeCustomJS( $jsFile = '/custom.js' ) {
 	$result = '';
 
@@ -137,6 +139,12 @@ function includeCustomJS( $jsFile = '/custom.js' ) {
 	return $result;
 }
 
+/**
+ * Format price
+ * 
+ * @param mixed $price Price to format.
+ * @return mixed Formatted price.
+ */
 function formatPrice( $price ) {
 	$price = trim( $price );
 	if ( is_numeric( $price ) ) {

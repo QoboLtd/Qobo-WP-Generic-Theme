@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 ?>

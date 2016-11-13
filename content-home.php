@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content
  *
- * @package Qobo WP Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 ?>

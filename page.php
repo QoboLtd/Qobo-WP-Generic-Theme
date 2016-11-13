@@ -2,7 +2,7 @@
 /**
  * The default template for displaying the content
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 get_header();

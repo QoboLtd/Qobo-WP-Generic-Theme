@@ -2,7 +2,7 @@
 /**
  * Content template used for displaying the contact us content
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 $url = get_permalink();

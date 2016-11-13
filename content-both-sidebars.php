@@ -2,7 +2,7 @@
 /**
  * The template used for displaying Both Sidebars page content
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 ?>

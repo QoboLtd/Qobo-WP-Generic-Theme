@@ -2,7 +2,7 @@
 /**
  * The Right 1 Sidebar containing the main widgets
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 ?>

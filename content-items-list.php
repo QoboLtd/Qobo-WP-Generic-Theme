@@ -2,7 +2,7 @@
 /**
  * Content template used for displaying the Items list content
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 ?>

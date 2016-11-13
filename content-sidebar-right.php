@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content with a right sidebar
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 ?>

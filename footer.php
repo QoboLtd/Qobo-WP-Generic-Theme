@@ -4,7 +4,7 @@
  *
  * Contains footer content and the closing of the #main and #page div elements.
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 ?>

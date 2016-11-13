@@ -2,7 +2,7 @@
 /**
  * The Left 1 Sidebar containing the property finder
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 ?>

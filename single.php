@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 get_header();

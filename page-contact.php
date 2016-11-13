@@ -3,7 +3,7 @@
  * Template Name: Contact Us
  * The template for displaying the Contact Us page
  *
- * @package Qobo Generic Wordpress Theme
+ * @package Qobo_Generic_Wordpress_Theme
  */
 
 get_header();

@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 Theme Name: Qobo Generic Wordpress Theme
 Theme URI:
 Description: A generic Wordpress theme made using Twitter Bootstrap 3
@@ -9,7 +9,9 @@ Version: 1.0
 Tags: responsive, white, bootstrap, lightbox, flexslider, jquery, slim scroll, font awesome
 License: GPL2
 
-*/
+@package Qobo_Generic_Wordpress_Theme
+ */
+
 get_header(); ?>
 
 <div id="main-content" class="main-content">
