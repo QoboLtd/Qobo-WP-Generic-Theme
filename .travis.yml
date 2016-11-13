@@ -11,7 +11,7 @@ matrix:
         - php: hhvm
 
 install:
-    - ./bin/composer install --no-interaction --no-progress --no-suggest
+    - composer install --no-interaction --no-progress --no-suggest
 
 script: 
     - ./vendor/bin/phpcs --config-set ignore_warnings_on_exit 1
