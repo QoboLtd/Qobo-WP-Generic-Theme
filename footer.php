@@ -6,6 +6,7 @@
  *
  * @package Qobo Generic Wordpress Theme
  */
+
 ?>
 
 </div><!-- #main -->

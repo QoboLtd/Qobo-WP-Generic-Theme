@@ -5,6 +5,7 @@
  *
  * @package Qobo Generic Wordpress Theme
  */
+
 get_header();
 ?>
 

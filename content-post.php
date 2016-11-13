@@ -4,6 +4,7 @@
  *
  * @package Qobo Generic Wordpress Theme
  */
+
 ?>
 
 <div class="site-content content-area" role="main">

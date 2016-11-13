@@ -3,7 +3,9 @@
  * The Right 1 Sidebar containing the main widgets
  *
  * @package Qobo Generic Wordpress Theme
- */?>
+ */
+
+?>
 <div class="sidebar col-sm-3">
 	<?php if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
 	<div id="primary-sidebar" class="primary-sidebar widget-area " role="complementary">

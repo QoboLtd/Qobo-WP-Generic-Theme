@@ -5,7 +5,6 @@
  * @package Qobo Generic Wordpress Theme
  */
 
-
 /* Flush your rewrite rules for custom post types*/
 function bt_flush_rewrite_rules() {
 	flush_rewrite_rules();

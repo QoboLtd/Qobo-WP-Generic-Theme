@@ -4,6 +4,7 @@
  *
  * @package Qobo Generic Wordpress Theme
  */
+
 ?>
 <div class="site-content content-area" role="main">
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'wrap row ' ); ?>>

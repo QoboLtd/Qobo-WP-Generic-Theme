@@ -4,6 +4,7 @@
  *
  * @package Qobo WP Theme
  */
+
 ?>
 
 <div class="site-content content-area" role="main">
