@@ -1,9 +1,8 @@
 <?php
 /**
- * Default sidebar 
+ * Default sidebar
  *
  * @package Qobo Generic Wordpress Theme
- * 
  */?>
 <div class="sidebar col-sm-3">
 

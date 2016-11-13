@@ -4,7 +4,6 @@
  * The template for displaying a sidebar right of the content.
  *
  * @package Qobo Generic Wordpress Theme
- *
  */
 get_header();
 ?>
@@ -12,10 +11,10 @@ get_header();
 <div id="main-content" class="content-area">
 	<?php
 	// Start the Loop.
-	while (have_posts()) :
+	while ( have_posts() ) :
 		the_post();
 		// Include the page content template.
-		get_template_part('content','sidebar-left');
+		get_template_part( 'content','sidebar-left' );
 	endwhile;
 	?>
 </div> <!-- #main-content -->

@@ -1,8 +1,8 @@
 <?php
 /*
 Theme Name: Qobo Generic Wordpress Theme
-Theme URI: 
-Description: A generic Wordpress theme made using Twitter Bootstrap 3 
+Theme URI:
+Description: A generic Wordpress theme made using Twitter Bootstrap 3
 Author: Andreas Demetriou
 Author URI: http://facebook.com/androsland
 Version: 1.0

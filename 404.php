@@ -3,7 +3,6 @@
  * The template used for displaying 404 page
  *
  * @package Qobo WP Theme
- *
  */
 get_header(); ?>
 <div class="container">

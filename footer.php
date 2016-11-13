@@ -33,7 +33,7 @@
 				<?php dynamic_sidebar( 'footer-widget-6' ); ?>
 				<?php endif; ?>
 
-				<?php the_widget('QBDEVBY_Widget'); ?>
+				<?php the_widget( 'QBDEVBY_Widget' ); ?>
 		</div>
 	</div>
 </footer><!-- footer -->
