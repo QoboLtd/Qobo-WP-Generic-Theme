@@ -104,17 +104,17 @@ add_action( 'widgets_init', 'qobobgt_widgets_init' );
 /**
  * Include custom CSS from a given file
  *
- * @param string $cssFile Path to CSS file
- * @return string HTML <link> tag with URL of the custom CSS
+ * @param string $file Path to CSS file.
+ * @return string HTML <link> tag with URL of the custom CSS.
  */
-function includeCustomCSS( $cssFile = '/custom.css' ) {
+function includeCustomCSS( $file = '/custom.css' ) {
 	$result = '';
 
 	// ABSPATH points to WordPress folder, which in our
 	// case is in wp/ .  So we need one level up.
-	$projectRoot = ABSPATH . '..';
-	if ( ! empty( $cssFile ) && file_exists( $projectRoot . $cssFile ) ) {
-		$result = '<link rel="stylesheet" href="' . home_url( $cssFile ) . '">';
+	$root = ABSPATH . '..';
+	if ( ! empty( $file ) && file_exists( $root . $file ) ) {
+		$result = '<link rel="stylesheet" href="' . home_url( $file ) . '">';
 	}
 
 	return $result;
@@ -123,17 +123,17 @@ function includeCustomCSS( $cssFile = '/custom.css' ) {
 /**
  * Include custom JavaScript from a given file
  *
- * @param string $jsFile Path to JS file
- * @return string HTML <script> tag with URL of the custom JS
+ * @param string $file Path to JS file.
+ * @return string HTML <script> tag with URL of the custom JS.
  */
-function includeCustomJS( $jsFile = '/custom.js' ) {
+function includeCustomJS( $file = '/custom.js' ) {
 	$result = '';
 
 	// ABSPATH points to WordPress folder, which in our
 	// case is in wp/ .  So we need one level up.
-	$projectRoot = ABSPATH . '..';
-	if ( ! empty( $jsFile ) && file_exists( $projectRoot . $jsFile ) ) {
-		$result = '<script type="text/javascript" src="' . home_url( $jsFile ) . '"></script>';
+	$root = ABSPATH . '..';
+	if ( ! empty( $file ) && file_exists( $root . $file ) ) {
+		$result = '<script type="text/javascript" src="' . home_url( $file ) . '"></script>';
 	}
 
 	return $result;
@@ -141,18 +141,25 @@ function includeCustomJS( $jsFile = '/custom.js' ) {
 
 /**
  * Format price
- * 
+ *
  * @param mixed $price Price to format.
  * @return mixed Formatted price.
  */
 function formatPrice( $price ) {
 	$price = trim( $price );
 	if ( is_numeric( $price ) ) {
-		return '$' . number_format( (int ) $price );
-	} else { 			return $price ;
+		return '$' . number_format( (int) $price );
+	} else {
+		return $price ;
 	}
 }
 
+/**
+ * Filter images from HTML string
+ *
+ * @param string $string HTML string to filter images from.
+ * @return string|array Array of matches, or original string.
+ */
 function filterImagesFromString( $string ) {
 	preg_match_all( '/<img[^>]+>/', $string,$results,PREG_PATTERN_ORDER );
 	$matches = $results[0];
@@ -163,14 +170,20 @@ function filterImagesFromString( $string ) {
 	}
 }
 
+/**
+ * Get contact information
+ *
+ * @todo Fix to either print or return result, not both.
+ * @return string Error.
+ */
 function getContactInformation() {
-	$infoFile = '/contact-info.txt';
+	$info_file = '/contact-info.txt';
 	$result = '';
 	// ABSPATH points to WordPress folder, which in our
 	// case is in wp/ .  So we need one level up.
-	$projectRoot = ABSPATH . '..';
-	if ( ! empty( $infoFile ) && file_exists( $projectRoot . $infoFile ) ) {
-		$myfile = fopen( $projectRoot . $infoFile, 'r' ) or die( 'Unable to open file!' );
+	$root = ABSPATH . '..';
+	if ( ! empty( $info_file ) && file_exists( $root . $info_file ) ) {
+		$myfile = fopen( $root . $info_file, 'r' ) or die( 'Unable to open file!' );
 		while ( ! feof( $myfile ) ) {
 			echo fgets( $myfile ) . '<br />';
 		}
