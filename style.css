@@ -144,6 +144,14 @@ figure img {
 	vertical-align: middle;
 }
 
+/*Add this class to Bootstrap 3 rows and set columns to height:100% to create equal height columns.*/
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 @media (max-width: 767px) {
 	.display-xs-table {
 		display: table;
